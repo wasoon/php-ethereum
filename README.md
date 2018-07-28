@@ -23,7 +23,7 @@
     
     composer require wasoon/php-ethereum
     
-7、调用范例
+7、调用范例(API手册：https://github.com/ethereum/wiki/wiki/JSON-RPC)
 
     <?php
     use phpEthereum\phpEthereum;
