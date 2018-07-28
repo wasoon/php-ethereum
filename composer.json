@@ -1,0 +1,41 @@
+{
+    "name": "wasoon/php-ethereum",
+    "type": "library",
+    "keywords": [
+        "mail"
+    ],
+    "homepage": "https://github.com/wasoon/php-ethereum",
+    "license": "MIT",
+    "description": "",
+    "authors": [
+        {
+            "name": "Wilson",
+            "email": "Wilson@wasoon.cn",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "Wilson@wasoon.cn",
+        "issues": "https://github.com/wasoon/php-ethereum/issues",
+        "wiki": "",
+        "source": "https://github.com/wasoon/php-ethereum"
+    },
+    "require": {
+        "php": ">=5.4",
+	    "ext-curl": "*"
+    },
+    "suggest": {
+        "ext-xdebug": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "phpEthereum\\": "./src"
+        },
+        "classmap": [
+            "phpEthereum.php"
+        ]
+    },
+
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
