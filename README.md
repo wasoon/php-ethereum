@@ -41,7 +41,7 @@
     // test web3
     $web3 = $phpEthereum->web3();
     $clientVersion = $web3->setId(67)
-        ->clientVersion();
+                          ->clientVersion();
     var_dump($clientVersion);
     
     // test net
