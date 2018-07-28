@@ -25,14 +25,15 @@ class WaSoonLoader
             {
                 $class_file = (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . $fileName . '.php');
             }
-                
+
+            /*
             if(empty($class_file) || !is_file($class_file)) {
                 $class_file = (__DIR__ . DIRECTORY_SEPARATOR . $class_path . '.php');
-            }
+            }*/
             
-            #var_dump($class_file);
+            #var_dump($class_name . '-------' . $class_file);
             
-            if(is_file($class_file))
+            if(isset($class_file) && is_file($class_file))
             {
                 return (require $class_file);
             }            
