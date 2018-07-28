@@ -15,22 +15,40 @@ namespace phpEthereum;
 
 class phpEthereum
 {
-    protected $_host = '';
+    protected $_url = '';
 
-    public function __construct($host = 'http://localhost:8545/')
+    public function __construct($url = 'http://localhost:8545/')
     {
-        $this->setHost($host);
+        $this->setUrl($url);
     }
 
-    public function setHost($host = '')
+    public function setUrl($url)
     {
-        $this->_host = $host;
+        $this->_url = $url;
     }
 
-    public function connect($host = '')
+    public function eth()
     {
-        if($host) {
-            $this->setHost($host);
-        }
+        return $this;
+    }
+
+    public function db()
+    {
+        return $this;
+    }
+
+    public function net()
+    {
+        return $this;
+    }
+
+    public function shh()
+    {
+        return $this;
+    }
+
+    public function web3()
+    {
+        return $this;
     }
 }

@@ -5,9 +5,13 @@
  * Date: 2018/7/28
  * Time: 下午6:21
  */
-namespace phpEthereum;
+
+use phpEthereum\phpEthereum;
 
 require './autoload.php';
 
-$eth = new phpEthereum();
-var_dump($eth);
+$phpEthereum = new phpEthereum('http://localhost:8545/');
+$eth = $phpEthereum->eth();
+// 获取余额
+$balance = $eth->getBalance();
+var_dump($balance);
