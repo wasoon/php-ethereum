@@ -78,26 +78,26 @@ class phpEthereum
      */
     public function eth()
     {
-        return self::createInstance(ucfirst(__FUNCTION__));
+        return self::createInstance(__FUNCTION__);
     }
 
     public function db()
     {
-        return self::createInstance(ucfirst(__FUNCTION__));
+        return self::createInstance(__FUNCTION__);
     }
 
     public function net()
     {
-        return self::createInstance(ucfirst(__FUNCTION__));
+        return self::createInstance(__FUNCTION__);
     }
 
     public function shh()
     {
-        return self::createInstance(ucfirst(__FUNCTION__));
+        return self::createInstance(__FUNCTION__);
     }
 
     public function web3()
     {
-        return self::createInstance(ucfirst(__FUNCTION__));
+        return self::createInstance(__FUNCTION__);
     }
 }
