@@ -4,7 +4,7 @@
 ## 开发流程：
 1、安装go环境（请参考官方对安装go的各环境教程）
 
-2、安装以太坊节点：
+2、安装以太坊节点（MAC环境下安装）：
 
     brew tap ethereum/ethereum
     brew install ethereum
