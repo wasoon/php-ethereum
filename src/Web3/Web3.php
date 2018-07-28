@@ -16,7 +16,7 @@ use phpEthereum\Helper;
 
 /**
  * Class Web3
- * @package phpEthereum\Shh
+ * @package phpEthereum\Web3
  */
 class Web3 extends Helper
 {

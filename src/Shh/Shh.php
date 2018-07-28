@@ -15,7 +15,7 @@ namespace phpEthereum\Shh;
 use phpEthereum\Helper;
 
 /**
- * Class Net
+ * Class Shh
  * @package phpEthereum\Shh
  */
 class Shh extends Helper
