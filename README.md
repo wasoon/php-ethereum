@@ -41,7 +41,7 @@
     // test web3
     $web3 = $phpEthereum->web3();
     $clientVersion = $web3->setId(67)
-                          ->clientVersion();
+        ->clientVersion();
     var_dump($clientVersion);
     
     // test net
@@ -63,3 +63,10 @@
                     ->setId(73)
                     ->getMessages();
     var_dump($messages);
+    
+    // test personal
+    $personal = $phpEthereum->personal();
+    $signInfo = $personal->setParams(["0xdeadbeaf", "0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", ""])
+                         ->setId(1)
+                         ->sign();
+    var_dump($signInfo);

@@ -49,6 +49,9 @@ class Client
      */
     protected $_requestMethod = 'POST';
 
+    /**
+     * @var array
+     */
     protected $_header = [
         "Content-Type" => "application/json; charset=utf8"
     ];

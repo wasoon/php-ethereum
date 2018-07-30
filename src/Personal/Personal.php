@@ -23,18 +23,5 @@ class Personal extends Helper
     public function __call($name, $arguments)
     {
         return $this->send(__CLASS__ . '_' . $name);
-
-        /*
-        $class = __NAMESPACE__ . '\\' . $name;
-        $instance = new $class();
-        $instance->setParams($this->getParams());
-        $instance->setId($this->getId());
-
-        if(is_array($arguments)) {
-            return call_user_func_array([$instance, 'init'], $arguments);
-        }
-
-        return call_user_func([$instance, 'init']);
-        */
     }
 }
