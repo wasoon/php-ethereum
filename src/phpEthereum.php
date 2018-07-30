@@ -12,6 +12,7 @@
  */
 
 namespace phpEthereum;
+use phpEthereum\JsonRPC\Client;
 
 /**
  * Class phpEthereum
@@ -39,6 +40,7 @@ class phpEthereum
     public function setUrl($url)
     {
         $this->_url = $url;
+        Client::setUrl($url);
     }
 
     /**
@@ -52,13 +54,13 @@ class phpEthereum
     /**
      * @param $name
      * @param $arguments
-
+     */
     public function __call($name, $arguments)
     {
         $function = ucfirst($name);
 
         return self::createInstance($function);
-    }*/
+    }
 
     /**
      * @param string $function
@@ -71,33 +73,5 @@ class phpEthereum
         $instance = new $class();
 
         return $instance;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function eth()
-    {
-        return self::createInstance(__FUNCTION__);
-    }
-
-    public function db()
-    {
-        return self::createInstance(__FUNCTION__);
-    }
-
-    public function net()
-    {
-        return self::createInstance(__FUNCTION__);
-    }
-
-    public function shh()
-    {
-        return self::createInstance(__FUNCTION__);
-    }
-
-    public function web3()
-    {
-        return self::createInstance(__FUNCTION__);
     }
 }

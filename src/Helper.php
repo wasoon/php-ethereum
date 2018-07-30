@@ -12,33 +12,21 @@
  */
 
 namespace phpEthereum;
+use phpEthereum\JsonRPC\Client;
 
 
 /**
  * Class Helper
  * @package phpEthereum
  */
-class Helper
+class Helper extends Client
 {
-    /**
-     * @var array
-     */
-    protected $_params = [];
-
-    /**
-     * @var string|int|null
-     */
-    protected $_id = null;
-
     /**
      * @param string $method
      * @return array
      */
     public function send($method)
     {
-        $params = $this->getParams();
-        $id = $this->getId();
-
         // delete namespace
         if(false !== strpos($method, '\\')) {
             $method = substr(strrchr($method, '\\'), 1);
@@ -46,54 +34,8 @@ class Helper
 
         $method = lcfirst($method);
 
-        $requestDatas = [
-            'method' => $method,
-            'jsonrpc' => '2.0',
-            'params' => $params
-        ];
+        $this->setMethod($method);
 
-        if(!is_null($id)) {
-            $requestDatas['id'] = $id;
-        }
-
-        return $requestDatas;
-    }
-
-    /**
-     * @return array
-     */
-    public function getParams()
-    {
-        return $this->_params;
-    }
-
-    /**
-     * @param array $params
-     * @return $this
-     */
-    public function setParams(array $params = [])
-    {
-        $this->_params = $params;
-
-        return $this;
-    }
-
-    /**
-     * @return int|null|string
-     */
-    public function getId()
-    {
-        return $this->_id;
-    }
-
-    /**
-     * @param int|null|string $id
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->_id = $id;
-
-        return $this;
+        return $this->request();
     }
 }
