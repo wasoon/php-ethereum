@@ -1,5 +1,5 @@
 # php-ethereum
-用PHP语言编写的以太坊客户端SDK
+用PHP语言编（5.4以上版本）写的以太坊客户端SDK
 
 ## 开发流程：
 1、安装go环境（请参考官方对安装go的各环境教程）
@@ -95,7 +95,7 @@
                        ->setEtherbase();
     var_dump('setEtherbase:', $setStatus);
     
-    // 开始採扩（可过一段时间产生DAG后停止採护再用web3.fromWei查看以太币数量）
+    // 开始採扩（可过一段时间产生DAG后停止採扩再用$web3->fromWei()查看以太币数量）
     $minerStartStatus = $miner->setParams([1])
                               ->setId(1)
                               ->start();
